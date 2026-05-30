@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "VinylScan Palette instellen",
+        "description": "Kies de afbeeldingsbron, doellampen en standaard kleurovergangen.",
+        "data": {
+          "name": "Naam",
+          "image_entity_id": "Afbeeldingsbron",
+          "light_entity_ids": "Doellampen",
+          "color_duration": "Kleurduur",
+          "transition_duration": "Overgangsduur",
+          "max_colors": "Aantal dominante kleuren",
+          "min_brightness": "Minimale helderheid",
+          "loop_forever": "Oneindig herhalen",
+          "hue_shift_degrees": "Hue-shift",
+          "saturation_boost": "Saturatie-boost"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "VinylScan opties",
+        "description": "Werk de afbeeldingsbron, lampen en kleurinstellingen bij.",
+        "data": {
+          "name": "Naam",
+          "image_entity_id": "Afbeeldingsbron",
+          "light_entity_ids": "Doellampen",
+          "color_duration": "Kleurduur",
+          "transition_duration": "Overgangsduur",
+          "max_colors": "Aantal dominante kleuren",
+          "min_brightness": "Minimale helderheid",
+          "loop_forever": "Oneindig herhalen",
+          "hue_shift_degrees": "Hue-shift",
+          "saturation_boost": "Saturatie-boost"
+        }
+      }
+    }
+  }
+}

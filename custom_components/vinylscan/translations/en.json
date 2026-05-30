@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up VinylScan Palette",
+        "description": "Choose the image source entity, target lights, and the default transition behaviour.",
+        "data": {
+          "name": "Name",
+          "image_entity_id": "Image source entity",
+          "light_entity_ids": "Target lights",
+          "color_duration": "Color duration",
+          "transition_duration": "Transition duration",
+          "max_colors": "Maximum dominant colors",
+          "min_brightness": "Minimum brightness",
+          "loop_forever": "Loop forever",
+          "hue_shift_degrees": "Hue shift",
+          "saturation_boost": "Saturation boost"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "VinylScan options",
+        "description": "Update the image source, lights, and color extraction behaviour.",
+        "data": {
+          "name": "Name",
+          "image_entity_id": "Image source entity",
+          "light_entity_ids": "Target lights",
+          "color_duration": "Color duration",
+          "transition_duration": "Transition duration",
+          "max_colors": "Maximum dominant colors",
+          "min_brightness": "Minimum brightness",
+          "loop_forever": "Loop forever",
+          "hue_shift_degrees": "Hue shift",
+          "saturation_boost": "Saturation boost"
+        }
+      }
+    }
+  }
+}

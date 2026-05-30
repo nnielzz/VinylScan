@@ -1,0 +1,13 @@
+{
+  "domain": "vinylscan",
+  "name": "VinylScan Palette",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/example/vinylscan",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [
+    "Pillow>=10.0.0"
+  ],
+  "version": "0.1.0"
+}

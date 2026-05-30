@@ -1,0 +1,156 @@
+play_image_palette:
+  name: Play image palette
+  description: Download an image, extract saturated dominant colors, and play them on the configured lights.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID when you have multiple VinylScan setups.
+      selector:
+        text:
+    image_entity_id:
+      name: Image entity
+      description: Optional entity whose state contains a direct image URL. Overrides the configured source entity.
+      selector:
+        entity: {}
+    image_url:
+      name: Image URL
+      description: Optional direct external image URL. Overrides the entity state.
+      selector:
+        text:
+    light_entity_ids:
+      name: Lights
+      description: Optional light entities to override the configured targets.
+      selector:
+        entity:
+          domain: light
+          multiple: true
+    max_colors:
+      name: Max colors
+      description: Number of dominant colors to play back.
+      selector:
+        number:
+          min: 1
+          max: 10
+          step: 1
+          mode: slider
+    color_duration:
+      name: Color duration
+      description: Playback duration per dominant color in seconds.
+      selector:
+        number:
+          min: 0.1
+          max: 120
+          step: 0.5
+          mode: box
+    transition_duration:
+      name: Transition duration
+      description: Transition duration in seconds between color changes.
+      selector:
+        number:
+          min: 0
+          max: 120
+          step: 0.5
+          mode: box
+    loop_forever:
+      name: Loop forever
+      description: Keep cycling through the palette until stopped, the lights turn off, or another color is sent to the same lights.
+      selector:
+        boolean:
+    hue_shift_degrees:
+      name: Hue shift
+      description: Optional subtle hue animation in degrees while a color is playing, shifting to slightly darker shades.
+      selector:
+        number:
+          min: 0
+          max: 45
+          step: 0.5
+          mode: slider
+    min_brightness:
+      name: Minimum brightness
+      description: Filter threshold for near-black colors. Higher values remove darker colors sooner.
+      selector:
+        number:
+          min: 1
+          max: 180
+          step: 1
+          mode: slider
+    saturation_boost:
+      name: Saturation boost
+      description: Multiplier used to make extracted colors fuller on lights.
+      selector:
+        number:
+          min: 1
+          max: 3
+          step: 0.05
+          mode: slider
+    brightness_pct:
+      name: Brightness
+      description: Optional brightness percentage for the transitions.
+      selector:
+        number:
+          min: 1
+          max: 100
+          step: 1
+          mode: slider
+
+stop_palette_playback:
+  name: Stop palette playback
+  description: Stop an active looping or running palette playback. Looping playback also stops automatically when the target lights turn off or get a different color.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID when you have multiple VinylScan setups.
+      selector:
+        text:
+    light_entity_ids:
+      name: Lights
+      description: Optional light entities to stop playback on. If omitted, all active VinylScan playbacks are stopped.
+      selector:
+        entity:
+          domain: light
+          multiple: true
+
+transition_to_color:
+  name: Transition to color
+  description: Transition the configured lights to a specific RGB or hex color.
+  fields:
+    entry_id:
+      name: Config entry
+      description: Optional config entry ID when you have multiple VinylScan setups.
+      selector:
+        text:
+    light_entity_ids:
+      name: Lights
+      description: Optional light entities to override the configured targets.
+      selector:
+        entity:
+          domain: light
+          multiple: true
+    rgb_color:
+      name: RGB color
+      description: Target color as a list like [255, 100, 0].
+      selector:
+        object:
+    hex_color:
+      name: Hex color
+      description: Alternative target color in RRGGBB format.
+      selector:
+        text:
+    transition_duration:
+      name: Transition duration
+      description: Transition duration in seconds.
+      selector:
+        number:
+          min: 0
+          max: 120
+          step: 0.5
+          mode: box
+    brightness_pct:
+      name: Brightness
+      description: Optional brightness percentage for the transition.
+      selector:
+        number:
+          min: 1
+          max: 100
+          step: 1
+          mode: slider
